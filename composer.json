@@ -1,0 +1,26 @@
+{
+    "name": "kmaking/admin-template",
+    "description": "Admin Template pre define setup for laravel projects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ketan Ajani",
+            "email": "ketan.m.ajani@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "KMAKing\\AdminTemplate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KMAKing\\AdminTemplate\\KMAKingServiceProvider"
+            ]
+        }
+    }
+}
