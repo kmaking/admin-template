@@ -1,6 +1,12 @@
 @extends('admin.layout.auth')
 
 @section('content')
+
+    @if (session('status'))
+        @alert(['type' => 'success'])
+            {{ session('status') }}
+        @endalert
+    @endif
     <div class="card">
         <div class="card-header">{{ __('Register') }}</div>
 

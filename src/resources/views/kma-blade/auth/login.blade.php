@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (session('status'))
+    @alert(['type' => 'success'])
+        {{ session('status') }}
+    @endalert
+@endif
+
 <img src="{{ asset('vendors/images/login.png') }}" alt="login" class="login-img">
 <h2 class="text-center mb-30">Login</h2>
 <form method="POST" action="{{ route('admin.login') }}" aria-label="{{ __('Login') }}">

@@ -5,7 +5,7 @@
         @foreach($choice as $check_value => $check_label)
       
             <div class="custom-control custom-checkbox mb-5">
-                <input type="checkbox" class="custom-control-input" id="{{ $check_value }}" value="{{ $check_value }}" name="{{ $name }}[]" @if(in_array($check_value, $value ?? [])) checked @endif>
+                <input type="checkbox" class="custom-control-input" id="{{ $check_value }}" value="{{ $check_value }}" name="{{ $name }}[]" {{ in_array($check_value, $value ?? [])? 'checked': '' }}{{ set_attribute($attribute ?? []) }}>
                 <label class="custom-control-label" for="{{ $check_value }}">{{ $check_label }}</label>
             </div>      
 

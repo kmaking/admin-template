@@ -11,12 +11,12 @@
     <title>@yield('title') - {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    {!! style('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700', true) !!}
+    {!! style('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', true) !!}
     
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('vendors/styles/style.css') }}">
-    @yield('style')
+    {!! style('vendors/styles/style.css') !!}
+    @stack('style')
 
     <!-- Scripts -->
     <script>
@@ -54,8 +54,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('vendors/scripts/script.js') }}"></script>
-    <script src="{{ asset('js/vindicate.js') }}"></script>
-    @yield('script')
+    {!! script('vendors/scripts/script.js') !!}
+    {!! script('js/vindicate.js') !!}
+    @stack('script')
 </body>
 </html>

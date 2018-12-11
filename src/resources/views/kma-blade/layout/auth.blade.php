@@ -11,11 +11,11 @@ r<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    {!! style('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700', true) !!}
+    {!! style('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', true) !!}
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('vendors/styles/style.css') }}">
+    <!-- Styles -->
+    {!! style('vendors/styles/style.css') !!}
 
 </head>
 <body>
@@ -27,6 +27,6 @@ r<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         </div>
     </div>
 
-    <script src="{{ asset('vendors/scripts/script.js') }}"></script>
+    {!! script('vendors/scripts/script.js') !!}
 </body>
 </html>

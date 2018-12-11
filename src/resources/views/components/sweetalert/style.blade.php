@@ -1,1 +1,1 @@
-<link rel="stylesheet" type="text/css" href="{{ asset('plugins/sweetalert2/sweetalert2.css') }}">
+{!! style('plugins/sweetalert2/sweetalert2.css') !!}

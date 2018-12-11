@@ -32270,6 +32270,22 @@ jQuery(document).ready(function(){
 		}
 
 	}
+
+	var inputElements = document.getElementsByClassName("custom-file-input");
+	for (let inputElement of inputElements) {
+		inputElement.onchange = function(event) {
+			var target = event.target || event.srcElement;
+			if (target.value.length == 0) {
+				$(this).next().html('Choose file')
+				if (numFiles == target.files.length) {
+					cancelButton.onclick();
+				}
+			} else {
+				$(this).next().html(target.value)
+				numFiles = target.files.length;
+			}
+		}
+	}
 })(window.jQuery || window.Zepto);
 
 function CopyToClipboard(value, showNotification, notificationText) {
