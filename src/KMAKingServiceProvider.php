@@ -18,14 +18,15 @@ class KMAKingServiceProvider extends ServiceProvider
          * publish admin template assets
          */
         $this->publishes([
-            __DIR__.'/public' => public_path()
+            __DIR__.'/public' => public_path(),
+            __DIR__.'/resources/views/components' => resource_path('views/components')
         ], 'kma-assets');
 
         /**
          * publish admin template auth views and components of boostrap
          */
         $this->publishes([
-            __DIR__.'/resources/views/' => resource_path('views')
+            __DIR__.'/resources/views/kma-blade' => resource_path('views/kma-blade')
         ], 'kma-blade');
 
 
