@@ -1,5 +1,5 @@
-{!! style('plugins/datatables/media/css/jquery.dataTables.css')!! 
-{!! style('plugins/datatables/media/css/dataTables.bootstrap4.css')!! 
+{!! style('plugins/datatables/media/css/jquery.dataTables.css') !!}
+{!! style('plugins/datatables/media/css/dataTables.bootstrap4.css') !!}
 {!! style('plugins/datatables/AutoFill-2.3.0/css/autoFill.bootstrap4.css') !!}
 {!! style('plugins/datatables/Buttons-1.5.2/css/buttons.bootstrap4.min.css') !!}
 {!! style('plugins/datatables/ColReorder-1.5.0/css/colReorder.bootstrap4.min.css') !!}
